@@ -11,7 +11,6 @@ body {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     background-color: hsl(257, 40%, 49%);
-    background-size: cover;
     background-image: url(images/bg-desktop.svg);
     background-repeat: no-repeat;
 }
@@ -38,6 +37,7 @@ body {
 
 .content {
     padding-bottom: 8.2vw;
+    margin-right: 2vw;
 }
 
 .content p {
@@ -52,7 +52,7 @@ body {
     font-family: 'Poppins';
     font-size: 2.4rem;
     font-weight: 600;
-    letter-spacing: .1rem;
+    letter-spacing: .05rem;
 }
 
 .landing button {
@@ -85,6 +85,12 @@ body {
 
 /* for smaller screens */
 
+@media screen and (max-width: 1450px) {
+    .content {
+        margin-right: 0vw;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .container {
         flex-direction: column;
@@ -92,11 +98,16 @@ body {
     }
 
     .content {
-        margin-inline: 10vw;
+        margin-inline: 13vw;
     }
 }
 
 @media screen and (max-width: 500px) {
+    body {
+        background-image: url(images/bg-mobile.svg);
+        background-size: contain;
+    }
+
     .logo img {
         margin-top: 10vw;
         width: 130px;
@@ -107,7 +118,7 @@ body {
     }
 
     .content {
-        margin-inline: 13vw;
+        margin-inline: 9vw;
     }
 
     .content p {
@@ -115,6 +126,7 @@ body {
         margin-top: 3vw;
         margin-bottom: 5vw;
         line-height: 1.5rem;
+
     }
 
     .content h1 {
